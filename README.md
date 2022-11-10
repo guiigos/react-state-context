@@ -1,4 +1,4 @@
-# React State Recoil
+# React State Context API
 Global state management example project using **Context API**, with the objective of grouping techniques and best practices with the tool. This project has no functional objective, just a brief implementation example.
 
 <details>
