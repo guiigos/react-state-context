@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import useCombinedReducers from '../reducer/hooks/useCombinedReducers';
 
 const Context = React.createContext();
@@ -6,14 +6,14 @@ const Context = React.createContext();
 const ContextProvider = ({ children }) => {
   const { store, reducers } = useCombinedReducers();
 
-  const triggerDispatchs = (action) =>
-    reducers.forEach(reducer => reducer(action));
+  const triggerDispatchs = useRef((action) =>
+    reducers.forEach(reducer => reducer(action)));
 
   return (
     <Context.Provider
       value={{
         store,
-        dispatch: triggerDispatchs,
+        dispatch: triggerDispatchs.current,
       }}
     >
       {children}
