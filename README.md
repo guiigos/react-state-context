@@ -33,4 +33,4 @@ $ npm start
 ## License
 Project developed for academic purposes.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/github/license/guiigos/react-state-context?style=flat-square)](./LICENSE)
